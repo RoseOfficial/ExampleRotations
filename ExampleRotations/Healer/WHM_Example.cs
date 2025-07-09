@@ -2,7 +2,7 @@ using Dalamud.Interface.Colors;
 
 namespace ExampleRotations.Healer;
 
-[Rotation("Default", CombatType.PvE, GameVersion = "7.25")]
+[Rotation("Example", CombatType.PvE, GameVersion = "7.25")]
 [SourceCode(Path = "main/BasicRotations/Healer/WHM_Example.cs")]
 [Api(5)]
 public sealed class WHM_Example : WhiteMageRotation
