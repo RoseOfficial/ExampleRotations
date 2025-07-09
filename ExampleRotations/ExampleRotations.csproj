@@ -1,0 +1,43 @@
+<Project Sdk="Dalamud.NET.Sdk/12.0.2">
+          <PropertyGroup>
+            <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+            <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+            <AssemblyVersion>1.0.0.0</AssemblyVersion>
+          </PropertyGroup>
+  
+          <PropertyGroup>
+            <ImplicitUsings>true</ImplicitUsings>
+          </PropertyGroup>
+  
+          <ItemGroup>
+            <Compile Remove="ExampleRotations\**" />
+            <EmbeddedResource Remove="ExampleRotations\**" />
+          </ItemGroup>
+  
+          <ItemGroup>
+            <PackageReference Include="RotationSolverReborn.Basic" Version="*-*" />
+          </ItemGroup>
+  
+          <ItemGroup>
+            <Using Include="Dalamud.Game.ClientState.JobGauge.Enums" />
+            <Using Include="Dalamud.Game.ClientState.Objects.Types" />
+            <Using Include="Dalamud.Interface" />
+            <Using Include="ImGuiNET" />
+            <Using Include="Newtonsoft.Json" />
+            <Using Include="RotationSolver.Basic" />
+            <Using Include="RotationSolver.Basic.Actions" />
+            <Using Include="RotationSolver.Basic.Attributes" />
+            <Using Include="RotationSolver.Basic.Configuration.RotationConfig" />
+            <Using Include="RotationSolver.Basic.Data" />
+            <Using Include="RotationSolver.Basic.Helpers" />
+            <Using Include="RotationSolver.Basic.Rotations" />
+            <Using Include="RotationSolver.Basic.Rotations.Basic" />
+            <Using Include="System.Numerics" />
+            <Using Include="System.Reflection" />
+          </ItemGroup>
+          <ItemGroup>
+            <None Update="ExampleRotations.json">
+              <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            </None>
+          </ItemGroup>
+        </Project>
