@@ -99,6 +99,10 @@ public sealed class WHM_Example : WhiteMageRotation
 
     protected override bool GeneralGCD(out IAction? act)
     {
+        if (StonePvE.CanUse(out act))
+        {
+            return true;
+        }
 
         return base.GeneralGCD(out act);
     }
